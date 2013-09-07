@@ -23,6 +23,8 @@
 		D7D173A417DBB83200981B5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D1737F17DBB83100981B5C /* Foundation.framework */; };
 		D7D173AC17DBB83200981B5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7D173AA17DBB83200981B5C /* InfoPlist.strings */; };
 		D7D173AF17DBB83200981B5C /* leowic_3_Labb1bTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D173AE17DBB83200981B5C /* leowic_3_Labb1bTests.m */; };
+		D7D173BB17DBB95000981B5C /* AldMovingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D173BA17DBB95000981B5C /* AldMovingObject.m */; };
+		D7D173BC17DBB95000981B5C /* AldMovingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D173BA17DBB95000981B5C /* AldMovingObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		D7D173AB17DBB83200981B5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D7D173AD17DBB83200981B5C /* leowic_3_Labb1bTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leowic_3_Labb1bTests.h; sourceTree = "<group>"; };
 		D7D173AE17DBB83200981B5C /* leowic_3_Labb1bTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = leowic_3_Labb1bTests.m; sourceTree = "<group>"; };
+		D7D173B917DBB95000981B5C /* AldMovingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AldMovingObject.h; path = Objects/AldMovingObject.h; sourceTree = "<group>"; };
+		D7D173BA17DBB95000981B5C /* AldMovingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AldMovingObject.m; path = Objects/AldMovingObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		D7D1738317DBB83200981B5C /* leowic-3_Labb1b */ = {
 			isa = PBXGroup;
 			children = (
+				D7D173B817DBB91F00981B5C /* Objects */,
 				D7D1738C17DBB83200981B5C /* AldAppDelegate.h */,
 				D7D1738D17DBB83200981B5C /* AldAppDelegate.m */,
 				D7D1739517DBB83200981B5C /* MainStoryboard.storyboard */,
@@ -158,6 +163,15 @@
 				D7D173AA17DBB83200981B5C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7D173B817DBB91F00981B5C /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D7D173B917DBB95000981B5C /* AldMovingObject.h */,
+				D7D173BA17DBB95000981B5C /* AldMovingObject.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +288,7 @@
 				D7D1738A17DBB83200981B5C /* main.m in Sources */,
 				D7D1738E17DBB83200981B5C /* AldAppDelegate.m in Sources */,
 				D7D1739A17DBB83200981B5C /* AldViewController.m in Sources */,
+				D7D173BB17DBB95000981B5C /* AldMovingObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7D173AF17DBB83200981B5C /* leowic_3_Labb1bTests.m in Sources */,
+				D7D173BC17DBB95000981B5C /* AldMovingObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
