@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D790989517DE0CCF00126A99 /* AldObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D790989217DE0CCF00126A99 /* AldObject.m */; };
+		D790989617DE0CCF00126A99 /* AldStaticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D790989417DE0CCF00126A99 /* AldStaticObject.m */; };
+		D794DDC117DCCAAA009D60B7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794DDC017DCCAAA009D60B7 /* QuartzCore.framework */; };
+		D794DDC717DCCB67009D60B7 /* AldMovingObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D794DDC617DCCB67009D60B7 /* AldMovingObjectView.m */; };
 		D7D1737E17DBB83100981B5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D1737D17DBB83100981B5C /* UIKit.framework */; };
 		D7D1738017DBB83100981B5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D1737F17DBB83100981B5C /* Foundation.framework */; };
 		D7D1738217DBB83100981B5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D1738117DBB83100981B5C /* CoreGraphics.framework */; };
@@ -38,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D790989117DE0CCF00126A99 /* AldObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AldObject.h; path = Objects/AldObject.h; sourceTree = "<group>"; };
+		D790989217DE0CCF00126A99 /* AldObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AldObject.m; path = Objects/AldObject.m; sourceTree = "<group>"; };
+		D790989317DE0CCF00126A99 /* AldStaticObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AldStaticObject.h; path = Objects/AldStaticObject.h; sourceTree = "<group>"; };
+		D790989417DE0CCF00126A99 /* AldStaticObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AldStaticObject.m; path = Objects/AldStaticObject.m; sourceTree = "<group>"; };
+		D794DDC017DCCAAA009D60B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../../../System/Library/Frameworks/QuartzCore.framework; sourceTree = "<group>"; };
+		D794DDC517DCCB67009D60B7 /* AldMovingObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AldMovingObjectView.h; sourceTree = "<group>"; };
+		D794DDC617DCCB67009D60B7 /* AldMovingObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AldMovingObjectView.m; sourceTree = "<group>"; };
 		D7D1737A17DBB83100981B5C /* leowic-3_Labb1b.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "leowic-3_Labb1b.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D1737D17DBB83100981B5C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D7D1737F17DBB83100981B5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +83,7 @@
 				D7D1737E17DBB83100981B5C /* UIKit.framework in Frameworks */,
 				D7D1738017DBB83100981B5C /* Foundation.framework in Frameworks */,
 				D7D1738217DBB83100981B5C /* CoreGraphics.framework in Frameworks */,
+				D794DDC117DCCAAA009D60B7 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +100,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D794DDC217DCCB25009D60B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D794DDC517DCCB67009D60B7 /* AldMovingObjectView.h */,
+				D794DDC617DCCB67009D60B7 /* AldMovingObjectView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D794DDC317DCCB29009D60B7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D7D1739817DBB83200981B5C /* AldViewController.h */,
+				D7D1739917DBB83200981B5C /* AldViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D794DDC417DCCB38009D60B7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D7D1739517DBB83200981B5C /* MainStoryboard.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		D7D1737117DBB83100981B5C = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +148,7 @@
 		D7D1737C17DBB83100981B5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D794DDC017DCCAAA009D60B7 /* QuartzCore.framework */,
 				D7D1737D17DBB83100981B5C /* UIKit.framework */,
 				D7D1737F17DBB83100981B5C /* Foundation.framework */,
 				D7D1738117DBB83100981B5C /* CoreGraphics.framework */,
@@ -121,12 +160,12 @@
 		D7D1738317DBB83200981B5C /* leowic-3_Labb1b */ = {
 			isa = PBXGroup;
 			children = (
+				D794DDC417DCCB38009D60B7 /* Storyboards */,
+				D794DDC317DCCB29009D60B7 /* Controllers */,
+				D794DDC217DCCB25009D60B7 /* Views */,
 				D7D173B817DBB91F00981B5C /* Objects */,
 				D7D1738C17DBB83200981B5C /* AldAppDelegate.h */,
 				D7D1738D17DBB83200981B5C /* AldAppDelegate.m */,
-				D7D1739517DBB83200981B5C /* MainStoryboard.storyboard */,
-				D7D1739817DBB83200981B5C /* AldViewController.h */,
-				D7D1739917DBB83200981B5C /* AldViewController.m */,
 				D7D1738417DBB83200981B5C /* Supporting Files */,
 			);
 			path = "leowic-3_Labb1b";
@@ -168,6 +207,10 @@
 		D7D173B817DBB91F00981B5C /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				D790989117DE0CCF00126A99 /* AldObject.h */,
+				D790989217DE0CCF00126A99 /* AldObject.m */,
+				D790989317DE0CCF00126A99 /* AldStaticObject.h */,
+				D790989417DE0CCF00126A99 /* AldStaticObject.m */,
 				D7D173B917DBB95000981B5C /* AldMovingObject.h */,
 				D7D173BA17DBB95000981B5C /* AldMovingObject.m */,
 			);
@@ -289,6 +332,9 @@
 				D7D1738E17DBB83200981B5C /* AldAppDelegate.m in Sources */,
 				D7D1739A17DBB83200981B5C /* AldViewController.m in Sources */,
 				D7D173BB17DBB95000981B5C /* AldMovingObject.m in Sources */,
+				D794DDC717DCCB67009D60B7 /* AldMovingObjectView.m in Sources */,
+				D790989517DE0CCF00126A99 /* AldObject.m in Sources */,
+				D790989617DE0CCF00126A99 /* AldStaticObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +444,10 @@
 		D7D173B317DBB83200981B5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "leowic-3_Labb1b/leowic-3_Labb1b-Prefix.pch";
 				INFOPLIST_FILE = "leowic-3_Labb1b/leowic-3_Labb1b-Info.plist";
@@ -409,6 +459,10 @@
 		D7D173B417DBB83200981B5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "leowic-3_Labb1b/leowic-3_Labb1b-Prefix.pch";
 				INFOPLIST_FILE = "leowic-3_Labb1b/leowic-3_Labb1b-Info.plist";
@@ -470,6 +524,7 @@
 				D7D173B417DBB83200981B5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7D173B517DBB83200981B5C /* Build configuration list for PBXNativeTarget "leowic-3_Labb1bTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +533,7 @@
 				D7D173B717DBB83200981B5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AldStaticObject.h"
 
-@interface AldMovingObject : NSObject {
-    
-}
+@interface AldMovingObject : AldStaticObject
 
-@property (nonatomic) CGPoint position;
 @property (nonatomic) CGRect bounds;
 @property (nonatomic) CGFloat velocity;
 @property (nonatomic) CGFloat directionRad;
@@ -20,7 +18,7 @@
 
 /** Returns an initialized AldMovingObject object with the given position, as well as restricted movement within the given bounds.
  */
--(id)initWithBounds:(CGRect)bounds andPosition:(CGPoint)position;
+-(id)initWithBounds:(CGRect)bounds andPosition:(CGPoint)position andSize:(CGSize)size andTexture: (CGImageRef)texture;
 
 -(BOOL)hitLeft;
 -(BOOL)hitRight;

@@ -6,16 +6,15 @@
 //  Copyright (c) 2013 LTU. All rights reserved.
 //
 
-#import <math.h>
 #import "AldMovingObject.h"
+#import <math.h>
 
 @implementation AldMovingObject
 
--(id)initWithBounds:(CGRect)bounds andPosition:(CGPoint)position {
-    self = [super init];
+-(id)initWithBounds:(CGRect)bounds andPosition:(CGPoint)position andSize:(CGSize)size andTexture:(CGImageRef)texture {
+    self = [super initWithPosition:position andSize:size andTexture:texture];
     if (self) {
         self.bounds = bounds;
-        self.position = position;
     }
     
     return self;
@@ -43,10 +42,11 @@
 
 -(BOOL)hitLeft:(CGFloat*)x {
     int leftBoundary = self.bounds.origin.x;
-    BOOL hit = *x <= leftBoundary;
+    CGFloat mod = -self.size.width/2;
+    BOOL hit = *x + mod <= leftBoundary;
     
     if (hit) {
-        *x = leftBoundary;
+        *x = leftBoundary + -mod;
     }
     
     return hit;
@@ -54,10 +54,11 @@
 
 -(BOOL)hitRight:(CGFloat*)x {
     int rightBoundary = self.bounds.origin.x + self.bounds.size.width;
-    BOOL hit = *x >=  + rightBoundary;
+    CGFloat mod = self.size.width/2;
+    BOOL hit = *x + mod >= rightBoundary;
     
     if (hit) {
-        *x = rightBoundary;
+        *x = rightBoundary + -mod;
     }
     
     return hit;
@@ -65,10 +66,11 @@
 
 -(BOOL)hitTop:(CGFloat*)y {
     int topBoundary = self.bounds.origin.y;
-    BOOL hit = *y <= topBoundary;
+    CGFloat mod = -self.size.height/2;
+    BOOL hit = *y + mod <= topBoundary;
     
     if (hit) {
-        *y = topBoundary;
+        *y = topBoundary + -mod;
     }
     
     return hit;
@@ -76,19 +78,19 @@
 
 -(BOOL)hitBottom:(CGFloat*)y {
     int bottomBoundary = self.bounds.origin.y + self.bounds.size.height;
-    BOOL hit = *y >= bottomBoundary;
+    CGFloat mod = self.size.height/2;
+    BOOL hit = *y + mod >= bottomBoundary;
     
     if (hit) {
-        *y = bottomBoundary;
+        *y = bottomBoundary + -mod;
     }
     
-    return *y >= bottomBoundary;
+    return hit;
 }
 
 -(void)update:(CGFloat)dt {
     
-    static const CGFloat deg90Rad = 90 * M_PI / 180.0;
-    static const CGFloat deg360Rad = 360 * M_PI / 180.0;
+    static const CGFloat deg180Rad = M_PI;
     
     CGFloat x = self.position.x, y = self.position.y, dir = self.directionRad;
     
@@ -96,24 +98,24 @@
     y += self.velocity * sinf(dir) * dt;
     
     if ([self hitLeft: &x]) {
-        dir += deg90Rad;
+        dir = deg180Rad - dir;
     }
     
     if ([self hitRight: &x]) {
-        dir += deg90Rad;
+        dir = deg180Rad - dir;
     }
     
     if ([self hitTop: &y]) {
-        dir += deg90Rad;
+        dir = -dir;
     }
     
     if ([self hitBottom: &y]) {
-        dir += deg90Rad;
+        dir = -dir;
     }
     
     // Make sure that rotation is always within 0 < rot < 360 degrees
-    while (dir >= deg360Rad) {
-        dir -= deg360Rad;
+    while (dir >= deg180Rad*2) {
+        dir -= deg180Rad*2;
     }
     
     self.position = CGPointMake(x, y);

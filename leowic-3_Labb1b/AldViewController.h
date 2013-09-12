@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 LTU. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface AldViewController : UIViewController
+
+- (void)gameLoop;
 
 @end
