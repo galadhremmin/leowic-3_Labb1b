@@ -28,20 +28,30 @@
 {
     [super viewDidLoad];
     
-    self.canvas = [[AldMovingObjectView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:self.canvas];
+    AldMovingObjectView *canvas;
+    AldMovingObject *demoObject;
+    CADisplayLink *displayLink;
     
-    self.demoObject = [[AldMovingObject alloc] initWithBounds:self.view.bounds
-                                                  andPosition:CGPointMake(self.canvas.bounds.size.width * 0.5,
-                                                                          self.canvas.bounds.size.height * 0.5)
-                                                      andSize:CGSizeMake(50, 50)
-                                                   andTexture:nil];
-    [self.demoObject setVelocity: 3];
-    [self.demoObject setDirectionRad:2  5*3.141592/180.0];
-    [self.canvas.sprites addObject:self.demoObject];
+    canvas = [[AldMovingObjectView alloc] initWithFrame:self.view.bounds];
     
-    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(gameLoop)];
-    [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    demoObject = [[AldMovingObject alloc] initWithBounds:canvas.bounds
+                                             andPosition:CGPointMake(canvas.bounds.size.width * 0.5,
+                                                                     canvas.bounds.size.height * 0.5)
+                                                 andSize:CGSizeMake(50, 50)
+                                              andTexture:nil];
+    [demoObject setVelocity: 3];
+    [demoObject setDirectionDeg:30];
+    
+    [canvas.sprites addObject:demoObject];
+    
+    displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(gameLoop)];
+    [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    self.displayLink = displayLink;
+    self.canvas = canvas;
+    self.demoObject = demoObject;
+    
+    [self.view addSubview:canvas];
 }
 
 - (void)dealloc {

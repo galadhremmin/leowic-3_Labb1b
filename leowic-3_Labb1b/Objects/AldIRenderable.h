@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AldObject : NSObject
+@protocol AldIRenderableObject 
 - (void)renderWithContext:(CGContextRef)ctx deltaT:(CGFloat)dt;
 @end

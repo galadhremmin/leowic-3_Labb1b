@@ -7,7 +7,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "AldObject.h"
+#import "AldIRenderable.h"
 #import "AldMovingObjectView.h"
 
 @interface AldMovingObjectView()
@@ -31,7 +31,7 @@
     
     CGContextSetRGBFillColor(ctx, 1, 1, 1, 1);
     CGContextFillRect(ctx, self.bounds);
-    for (AldObject *sprite in self.sprites) {
+    for (NSObject<AldIRenderableObject> *sprite in self.sprites) {
         [sprite renderWithContext:ctx deltaT:self.renderingDelta];
     }
 }

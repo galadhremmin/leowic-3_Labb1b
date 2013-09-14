@@ -24,30 +24,30 @@
 
 - (void)testMovingObjectLeftBoundaryCheck
 {
-    AldMovingObject *obj = [[AldMovingObject alloc] initWithBounds:CGRectMake(100, 100, 1000, 1000) andPosition:CGPointMake(100, 100)];
+    AldMovingObject *obj = [[AldMovingObject alloc] initWithBounds:CGRectMake(100, 100, 1000, 1000) andPosition:CGPointMake(100, 100)andSize:CGSizeMake(10, 10) andTexture:nil];
     CGFloat x = 50;
     
     BOOL hits = [obj hitLeft: &x];
     
     STAssertEquals(hits, YES, @"The object's position is outside the moving object's left boundary, but the hitLeft method believes it is not.");
-    STAssertEquals(x, 100.0f, @"x should be set to boundary value.");
+    STAssertEquals(x, 105.0f, @"x should be set to boundary value.");
     
-    x = 101;
+    x = 106;
     hits = [obj hitLeft: &x];
     
     STAssertEquals(hits, NO, @"The object's position is inside the moving object's left boundary, but the hitLeft method believes it is not.");
-    STAssertEquals(x, 101.0f, @"x should be unchanged, but it isn't.");
+    STAssertEquals(x, 106.0f, @"x should be unchanged, but it isn't.");
 }
 
 - (void)testMovingObjectRightBoundaryCheck
 {
-    AldMovingObject *obj = [[AldMovingObject alloc] initWithBounds:CGRectMake(100, 100, 1000, 1000) andPosition:CGPointMake(100, 100)];
+    AldMovingObject *obj = [[AldMovingObject alloc] initWithBounds:CGRectMake(100, 100, 1000, 1000) andPosition:CGPointMake(100, 100)andSize:CGSizeMake(10, 10) andTexture:nil];
     CGFloat x = 1101;
     
     BOOL hits = [obj hitRight: &x];
 
     STAssertEquals(hits, YES, @"The object's position is outside the moving object's right boundary, but the hitRight method believes it is not.");
-    STAssertEquals(x, 1100.0f, @"x should be set to boundary value.");
+    STAssertEquals(x, 1095.0f, @"x should be set to boundary value.");
     
     x = 500;
     hits = [obj hitRight: &x];
@@ -58,7 +58,7 @@
 
 - (void)testMovingObjectTopBoundaryCheck
 {
-    AldMovingObject *obj = [[AldMovingObject alloc] initWithBounds:CGRectMake(100, 100, 1000, 1000) andPosition:CGPointMake(100, 50)];
+    AldMovingObject *obj = [[AldMovingObject alloc] initWithBounds:CGRectMake(100, 100, 1000, 1000) andPosition:CGPointMake(100, 50) andSize:CGSizeMake(10, 10) andTexture:nil];
     
     BOOL hits = [obj hitTop];
     
@@ -72,7 +72,7 @@
 
 - (void)testMovingObjectBottomBoundaryCheck
 {
-    AldMovingObject *obj = [[AldMovingObject alloc] initWithBounds:CGRectMake(100, 100, 1000, 1000) andPosition:CGPointMake(100, 1150)];
+    AldMovingObject *obj = [[AldMovingObject alloc] initWithBounds:CGRectMake(100, 100, 1000, 1000) andPosition:CGPointMake(100, 1150) andSize:CGSizeMake(10, 10) andTexture:nil];
     BOOL hits = [obj hitBottom];
     
     STAssertEquals(hits, YES, @"The object's position is outside the moving object's bottom boundary, but the hitBottom method believes it is not.");

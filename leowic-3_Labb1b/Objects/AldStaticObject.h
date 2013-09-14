@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AldObject.h"
+#import "AldIRenderable.h"
 
-@interface AldStaticObject : AldObject
+@interface AldStaticObject : NSObject<AldIRenderableObject>
 
 @property (nonatomic) CGPoint position;
 @property (nonatomic) CGSize size;

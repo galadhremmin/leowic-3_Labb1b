@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D790989517DE0CCF00126A99 /* AldObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D790989217DE0CCF00126A99 /* AldObject.m */; };
 		D790989617DE0CCF00126A99 /* AldStaticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D790989417DE0CCF00126A99 /* AldStaticObject.m */; };
 		D794DDC117DCCAAA009D60B7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794DDC017DCCAAA009D60B7 /* QuartzCore.framework */; };
 		D794DDC717DCCB67009D60B7 /* AldMovingObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D794DDC617DCCB67009D60B7 /* AldMovingObjectView.m */; };
@@ -42,8 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D790989117DE0CCF00126A99 /* AldObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AldObject.h; path = Objects/AldObject.h; sourceTree = "<group>"; };
-		D790989217DE0CCF00126A99 /* AldObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AldObject.m; path = Objects/AldObject.m; sourceTree = "<group>"; };
+		D790989117DE0CCF00126A99 /* AldIRenderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AldIRenderable.h; path = Objects/AldIRenderable.h; sourceTree = "<group>"; };
 		D790989317DE0CCF00126A99 /* AldStaticObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AldStaticObject.h; path = Objects/AldStaticObject.h; sourceTree = "<group>"; };
 		D790989417DE0CCF00126A99 /* AldStaticObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AldStaticObject.m; path = Objects/AldStaticObject.m; sourceTree = "<group>"; };
 		D794DDC017DCCAAA009D60B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../../../System/Library/Frameworks/QuartzCore.framework; sourceTree = "<group>"; };
@@ -207,8 +205,7 @@
 		D7D173B817DBB91F00981B5C /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				D790989117DE0CCF00126A99 /* AldObject.h */,
-				D790989217DE0CCF00126A99 /* AldObject.m */,
+				D790989117DE0CCF00126A99 /* AldIRenderable.h */,
 				D790989317DE0CCF00126A99 /* AldStaticObject.h */,
 				D790989417DE0CCF00126A99 /* AldStaticObject.m */,
 				D7D173B917DBB95000981B5C /* AldMovingObject.h */,
@@ -333,7 +330,6 @@
 				D7D1739A17DBB83200981B5C /* AldViewController.m in Sources */,
 				D7D173BB17DBB95000981B5C /* AldMovingObject.m in Sources */,
 				D794DDC717DCCB67009D60B7 /* AldMovingObjectView.m in Sources */,
-				D790989517DE0CCF00126A99 /* AldObject.m in Sources */,
 				D790989617DE0CCF00126A99 /* AldStaticObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -88,6 +88,10 @@
     return hit;
 }
 
+-(void)setDirectionDeg:(CGFloat)dirDeg {
+    [self setDirectionRad:dirDeg*M_PI/180.0f];
+}
+
 -(void)update:(CGFloat)dt {
     
     static const CGFloat deg180Rad = M_PI;

@@ -28,6 +28,7 @@
 -(BOOL)hitRight:(CGFloat*)x;
 -(BOOL)hitTop:(CGFloat*)y;
 -(BOOL)hitBottom:(CGFloat*)y;
+-(void)setDirectionDeg:(CGFloat)dirDeg;
 
 -(void)update:(CGFloat)dt;
 
