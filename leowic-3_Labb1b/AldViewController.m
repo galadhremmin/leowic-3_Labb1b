@@ -39,7 +39,7 @@
                                                                      canvas.bounds.size.height * 0.5)
                                                  andSize:CGSizeMake(50, 50)
                                               andTexture:nil];
-    [demoObject setVelocity: 3];
+    [demoObject setVelocity: 200];
     [demoObject setDirectionDeg:30];
     
     [canvas.sprites addObject:demoObject];
@@ -67,13 +67,12 @@
 }
 
 - (void)gameLoop {
-    
     if (self.lastDraw == 0) {
         self.lastDraw = self.displayLink.timestamp;
         return;
     }
     
-    CGFloat delta = (self.displayLink.timestamp - self.lastDraw) / 0.016667;
+    CGFloat delta = (self.displayLink.timestamp - self.lastDraw);
     [self.demoObject update:delta];
     
     [self.canvas setRenderingDelta: delta];

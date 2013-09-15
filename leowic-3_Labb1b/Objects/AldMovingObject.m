@@ -125,6 +125,10 @@
     self.position = CGPointMake(x, y);
     self.directionRad = dir;
     
+#if DEBUG
+    // Print diagnostic data
+    NSLog(@"(%f, %f) %f", x, y, dir * 180.0 / M_PI);
+#endif
 }
 
 @end
