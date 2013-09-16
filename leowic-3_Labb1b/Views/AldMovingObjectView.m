@@ -7,7 +7,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "AldIRenderable.h"
+#import "AldIRenderableObject.h"
 #import "AldMovingObjectView.h"
 
 @interface AldMovingObjectView()

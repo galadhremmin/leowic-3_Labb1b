@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AldIRenderable.h"
+#import "AldIRenderableObject.h"
 
 @interface AldStaticObject : NSObject<AldIRenderableObject>
 

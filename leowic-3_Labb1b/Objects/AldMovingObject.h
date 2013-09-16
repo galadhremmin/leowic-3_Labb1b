@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "AldStaticObject.h"
+#import "AldIUpdatableObject.h"
 
-@interface AldMovingObject : AldStaticObject
+@interface AldMovingObject : AldStaticObject<AldIUpdatableObject>
 
 @property (nonatomic) CGRect bounds;
 @property (nonatomic) CGFloat velocity;

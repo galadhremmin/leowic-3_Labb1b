@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D71F637817E7781400A7E6E8 /* AldMovingObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D71F637717E7781400A7E6E8 /* AldMovingObjectView.m */; };
 		D790989617DE0CCF00126A99 /* AldStaticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D790989417DE0CCF00126A99 /* AldStaticObject.m */; };
 		D794DDC117DCCAAA009D60B7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794DDC017DCCAAA009D60B7 /* QuartzCore.framework */; };
-		D794DDC717DCCB67009D60B7 /* AldMovingObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D794DDC617DCCB67009D60B7 /* AldMovingObjectView.m */; };
 		D7D1737E17DBB83100981B5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D1737D17DBB83100981B5C /* UIKit.framework */; };
 		D7D1738017DBB83100981B5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D1737F17DBB83100981B5C /* Foundation.framework */; };
 		D7D1738217DBB83100981B5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D1738117DBB83100981B5C /* CoreGraphics.framework */; };
@@ -41,12 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D790989117DE0CCF00126A99 /* AldIRenderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AldIRenderable.h; path = Objects/AldIRenderable.h; sourceTree = "<group>"; };
+		D71F637617E7781400A7E6E8 /* AldMovingObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AldMovingObjectView.h; path = Views/AldMovingObjectView.h; sourceTree = "<group>"; };
+		D71F637717E7781400A7E6E8 /* AldMovingObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AldMovingObjectView.m; path = Views/AldMovingObjectView.m; sourceTree = "<group>"; };
+		D71F637917E7781D00A7E6E8 /* AldIRenderableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AldIRenderableObject.h; path = Interfaces/AldIRenderableObject.h; sourceTree = "<group>"; };
+		D71F637A17E7781D00A7E6E8 /* AldIUpdatableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AldIUpdatableObject.h; path = Interfaces/AldIUpdatableObject.h; sourceTree = "<group>"; };
 		D790989317DE0CCF00126A99 /* AldStaticObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AldStaticObject.h; path = Objects/AldStaticObject.h; sourceTree = "<group>"; };
 		D790989417DE0CCF00126A99 /* AldStaticObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AldStaticObject.m; path = Objects/AldStaticObject.m; sourceTree = "<group>"; };
 		D794DDC017DCCAAA009D60B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../../../System/Library/Frameworks/QuartzCore.framework; sourceTree = "<group>"; };
-		D794DDC517DCCB67009D60B7 /* AldMovingObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AldMovingObjectView.h; sourceTree = "<group>"; };
-		D794DDC617DCCB67009D60B7 /* AldMovingObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AldMovingObjectView.m; sourceTree = "<group>"; };
 		D7D1737A17DBB83100981B5C /* leowic-3_Labb1b.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "leowic-3_Labb1b.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D1737D17DBB83100981B5C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D7D1737F17DBB83100981B5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,11 +99,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D71F637517E777B600A7E6E8 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				D71F637917E7781D00A7E6E8 /* AldIRenderableObject.h */,
+				D71F637A17E7781D00A7E6E8 /* AldIUpdatableObject.h */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
 		D794DDC217DCCB25009D60B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D794DDC517DCCB67009D60B7 /* AldMovingObjectView.h */,
-				D794DDC617DCCB67009D60B7 /* AldMovingObjectView.m */,
+				D71F637617E7781400A7E6E8 /* AldMovingObjectView.h */,
+				D71F637717E7781400A7E6E8 /* AldMovingObjectView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -158,6 +168,7 @@
 		D7D1738317DBB83200981B5C /* leowic-3_Labb1b */ = {
 			isa = PBXGroup;
 			children = (
+				D71F637517E777B600A7E6E8 /* Interfaces */,
 				D794DDC417DCCB38009D60B7 /* Storyboards */,
 				D794DDC317DCCB29009D60B7 /* Controllers */,
 				D794DDC217DCCB25009D60B7 /* Views */,
@@ -205,7 +216,6 @@
 		D7D173B817DBB91F00981B5C /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				D790989117DE0CCF00126A99 /* AldIRenderable.h */,
 				D790989317DE0CCF00126A99 /* AldStaticObject.h */,
 				D790989417DE0CCF00126A99 /* AldStaticObject.m */,
 				D7D173B917DBB95000981B5C /* AldMovingObject.h */,
@@ -329,8 +339,8 @@
 				D7D1738E17DBB83200981B5C /* AldAppDelegate.m in Sources */,
 				D7D1739A17DBB83200981B5C /* AldViewController.m in Sources */,
 				D7D173BB17DBB95000981B5C /* AldMovingObject.m in Sources */,
-				D794DDC717DCCB67009D60B7 /* AldMovingObjectView.m in Sources */,
 				D790989617DE0CCF00126A99 /* AldStaticObject.m in Sources */,
+				D71F637817E7781400A7E6E8 /* AldMovingObjectView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
